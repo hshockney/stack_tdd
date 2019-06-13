@@ -2,6 +2,10 @@ require 'minitest/autorun'
 require_relative 'stack'
 
 class TestStack < MiniTest::Test
+    def test_stack_should_be_empty_on_construction
+        stack = Stack.new
+        assert stack.empty?
+    end
     def test_should_push_a_given_item
         stack = Stack.new
         stack.push(2)
