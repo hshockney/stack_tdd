@@ -10,7 +10,7 @@ class TestStack < MiniTest::Test
         stack =Stack.new
         stack.push(2)
         stack.push(4)
-        assert !stack.empty?
+        refute stack.empty?
     end
     def test_should_push_a_given_item
         stack = Stack.new
@@ -24,5 +24,11 @@ class TestStack < MiniTest::Test
         result = stack.pop
         assert_equal 2, result
         assert_equal 0, stack.size
+    end
+    def test_after_n_pushes_to_empty_stack_size_is_n
+        stack = Stack.new
+        stack.push(2)
+        stack.push(4)
+        assert_equal 2, stack.size
     end
 end
