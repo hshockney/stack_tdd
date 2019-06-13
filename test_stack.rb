@@ -13,5 +13,6 @@ class TestStack < MiniTest::Test
         stack.push(2)
         result = stack.pop
         assert_equal 2, result
+        assert_equal 0, stack.size
     end
 end
