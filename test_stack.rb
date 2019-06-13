@@ -6,6 +6,12 @@ class TestStack < MiniTest::Test
         stack = Stack.new
         assert stack.empty?
     end
+    def test_after_n_pushes_to_empty_stack_it_is_not_empty
+        stack =Stack.new
+        stack.push(2)
+        stack.push(4)
+        assert !stack.empty?
+    end
     def test_should_push_a_given_item
         stack = Stack.new
         stack.push(2)
