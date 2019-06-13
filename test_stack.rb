@@ -31,4 +31,12 @@ class TestStack < MiniTest::Test
         stack.push(4)
         assert_equal 2, stack.size
     end
+    def test_stack_with_n_elements_becomes_empyt_after_n_pops
+        stack = Stack.new
+        stack.push(2)
+        stack.push(4)
+        stack.pop
+        stack.pop
+        assert_equal 0, stack.size
+    end
 end
