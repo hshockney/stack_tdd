@@ -9,6 +9,13 @@ class Stack
       @elements.size  
     end
     def pop
+        if @elements.empty?
+            begin
+                raise Exception.new
+                rescue Exception => error
+                return "Cannot pop empty stack."
+            end
+        end
        @elements.pop   
     end
     def top

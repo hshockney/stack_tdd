@@ -41,8 +41,7 @@ class TestStack < MiniTest::Test
     end
     def test_throws_exception_when_popping_from_empty_stack
         stack = Stack.new
-        assert_raises do
-            stack.pop
-        end
+        result = stack.pop
+        assert_equal "Cannot pop empty stack.", result
     end
 end
