@@ -37,6 +37,6 @@ class TestStack < MiniTest::Test
         stack.push(4)
         stack.pop
         stack.pop
-        assert_equal 0, stack.size
+        assert stack.empty?
     end
 end
