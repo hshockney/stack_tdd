@@ -6,6 +6,7 @@ class TestStack < MiniTest::Test
         stack = Stack.new
         stack.push(2)
         assert_equal 1, stack.size
+        assert_equal 2, stack.pop
     end
     def test_should_pop_a_given_item
         stack = Stack.new
